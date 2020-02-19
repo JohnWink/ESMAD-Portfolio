@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Puppy puzzle</title>
+    <style>
+
+        /*------------------------Stylezation of elements and positioning -------------*/
+        text {
+            font-family: 'VT323', monospace;
+            fill: magenta;
+            stroke-width: 3px;
+            
+        }
+
+        svg#pup {
+            position:absolute;
+            transform: translate(-1800%, 465%);
+            z-index: 1;            
+            background-image: url("player sprite/push_2.png") ;
+            
+            /*----------animation set base for the pup.-------------*/
+            animation-name: puppyAni;
+            animation-duration: 12s;
+            animation-delay: 3.3s;
+            animation-fill-mode: forwards;
+        }
+
+        svg#background {
+            background-image: url("player sprite/background.png")
+        }
+
+        text.credit{
+            stroke-width: 2px;
+            fill: transparent;
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            /*animation set up of the credits*/
+            animation-name: textAni;
+            animation-duration: 2.9s;
+            animation-delay: 9.4s;
+            animation-fill-mode: forwards;
+        }
+
+
+        /*--------------------------------Animation setup------------------------------*/
+
+        /*---------------Word transitions------------------*/
+
+        .firstWord{
+            animation: 1.5s firstAni forwards;
+        }
+
+        @keyframes firstAni {
+            0%{
+                transform: translateY(0px)
+            }
+            85%{
+                transform: translateY(52%)
+            }
+            100%{
+                transform: translateY(50%)
+            }
+        }
+
+        .middleWord{
+            animation: 3s secondAni forwards;
+            
+        }
+
+        @keyframes secondAni {
+
+            0%{                 
+                transform: translateY(0%)
+            }
+
+            40%{
+                transform: translateY(0%)
+            }
+
+            85%{
+                transform: translateY(-75%)
+            }
+            100%{
+                transform: translateY(-70%)
+            }
+
+        }
+
+        .lastWord{
+            animation-name: thirdAni;
+            animation-duration: 6s;
+            animation-delay: 3.3s;
+            animation-fill-mode: forwards;
+        }
+        
+        @keyframes thirdAni {
+            0%{
+                transform: translateX(0%);
+
+            }
+
+            100%{
+                transform: translateX(23.7%);
+
+            }
+        }
+        /*---------------Puppy's animation and transformations -----------------*/
+
+        @keyframes puppyAni{
+            0%{
+                transform: translate(-1800%,465%);
+                background-image: url("player sprite/push_2.png");
+                
+
+            }
+
+            /* combining them close so that it can do a less smooth effect going for a 2 frame animation */
+
+            3.5%{background-image: url("player sprite/push_2.png");}
+            4%{background-image: url("player sprite/push_1.png");}
+            
+            7%{background-image: url("player sprite/push_1.png") ;}
+            7.5%{background-image: url("player sprite/push_2.png") ;}
+
+            14.5%{background-image: url("player sprite/push_2.png") ;}
+            15%{background-image: url("player sprite/push_1.png") ;}
+
+            22%{background-image: url("player sprite/push_1.png") ;}
+            22.5%{background-image: url("player sprite/push_2.png") ;}
+
+            25%{background-image: url("player sprite/push_2.png");}
+            25.5%{background-image: url("player sprite/push_1.png");}
+
+            29.5%{background-image: url("player sprite/push_1.png") ;}
+            30%{background-image: url("player sprite/push_2.png") ;}
+
+            33%{background-image: url("player sprite/push_2.png") ;}
+            34.5%{background-image: url("player sprite/push_1.png") ;}
+            
+            36%{background-image: url("player sprite/push_1.png") ;}
+            37.5%{background-image: url("player sprite/push_2.png") ;}
+
+            44.5%{background-image: url("player sprite/push_2.png") ;}
+            45%{background-image: url("player sprite/push_1.png") ;}
+
+            49.5%{background-image: url("player sprite/push_1.png") ;}
+            50%{
+                transform: translate(-1420.3%,465%);
+                background-image: url("player sprite/push_2.png") ;
+
+            }
+
+            51%{background-image: url("player sprite/player_victory1.png") ;}
+
+            59.9%{background-image: url("player sprite/player_victory1.png") ;}
+            61%{background-image: url("player sprite/player_victory2.png") ;}
+            
+            69.9%{background-image: url("player sprite/player_victory2.png") ;}
+            70%{background-image: url("player sprite/player_victory1.png") ;}
+
+            79.9%{background-image: url("player sprite/player_victory1.png") ;}
+            80%{background-image: url("player sprite/player_victory2.png") ;}
+
+            89.9%{background-image: url("player sprite/player_victory2.png") ;}
+            90%{background-image: url("player sprite/player_victory1.png") ;}
+
+            99.9%{background-image: url("player sprite/player_victory1.png") ;}
+            100%{background-image: url("player sprite/player_victory1.png") ;
+            transform: translate(-1420.3%,465%);}
+
+        }
+
+        /*------------Animation of the credits dash and apperence-----------------*/
+        @keyframes textAni {
+            0%{
+                fill: transparent;
+                stroke-dashoffset: 1000;
+            }
+            84%{fill: transparent;
+                stroke-dashoffset: 0;
+            }
+            100%{fill: magenta;
+                stroke-dashoffset: 0}
+        }
+
+
+    </style>
+    
+
+    <link href="https://fonts.googleapis.com/css?family=VT323&display=swap" rel="stylesheet">
+
+    
+
+
+
+</head>
+<body>
+
+    <div style="position:relitive;text-align:center">
+        <svg id="background"  width="800" height="500" style="outline: 5px solid black; overflow: visible; background-color: cyan;">
+            <g onclick="playGame()" >
+                <text  text-anchor="middle" alignment-baseline="central" x="-30px" y="50%" class="lastWord"  font-size="120px" stroke="black">
+                    P
+                </text>
+                <text  text-anchor="middle" alignment-baseline="central" x="35%" y="120%" class="middleWord"  font-size="120px" stroke="black">
+                    UPPY
+                </text>
+                <text  text-anchor="middle" alignment-baseline="central" x="70%" y="0%" class="firstWord"  font-size="120px" stroke="black">
+                    PUZZLE
+                </text>
+            </g>
+
+
+            <!--Credits part-->
+
+            <text text-anchor="middle" class="credit" alignment-baseline="central" x="50%" y="75%"  font-size="75px" stroke="black">
+                Created by
+            </text>
+            
+            <text text-anchor="middle" class="credit" alignment-baseline="central" x="27%" y="87%"  font-size="60px" stroke="black">
+                Luis Pires</text>
+            <text text-anchor="middle" class="credit" alignment-baseline="central" x="73%" y="87%"  font-size="60px" stroke="black">
+                Miguel Amaral</text>
+
+            <!--The transform transition x and y will influence the positions, for p its x, and for the others its gonna be y sence its gonna change and do the fall and bounce effect -->
+        </svg>
+        <svg id="pup" width="50px" height="50px" ></svg>
+        
+
+    </div>
+    
+    
+</body>
+
+<!--Fuction script so it can take to the games html-->
+<script>
+    function playGame() {
+
+        window.location.href = "puppy puzzle v2/index.html";
+        window.onload()
+        console.log("entered")
+        
+    }
+
+</script>
+</html>
