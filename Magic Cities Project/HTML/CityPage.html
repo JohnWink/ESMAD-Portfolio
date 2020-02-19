@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Cidades - Magic Cities</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS/CityPage.css">
+
+     <!--Favicon-->
+     <link rel="icon" href="/IMG/DG_favicon-02.png" type="image/gif" sizes="16x16">
+  </head>
+  <body>
+    <!----------------------Navbar code (copy this part for the other pages and add modifications / TEMP MISSING COMPONETS FROM LOGIN SESSIONS AND JS)--------------------------------------------->
+    <!--Sidebar burger code apperence  -->
+    <div id="sideBurger">
+        <ul> <!--Current problem atm is making it responcive to diferent defices ad diferent smaller resolutions (ask teacher>-->
+          <a href="MainPage.html"><img src="../IMG/iconPages/HomeIcon.png"></a><br><br>
+          <a href="CatalogPage.html"><img src="../IMG/iconPages/CatalogIcon.png" ></a><br><br>
+          <a href="QuizPage.html"><img src="../IMG/iconPages/QuizzIcon.png" ></a><br><br>
+          <a href="PerfilPage.html"><img src="../IMG/iconPages/ProfileIcon.png"></a><br><br>
+          <a href="SugestionPage.html"><img src="../IMG/iconPages/SugestionsIcon.png" ></a><br><br>
+        </ul>      
+      </div>
+      <!--mainnavbar code ( temp stuff that needs to added fuctional stuff from the mainpage.html/js etc )-->
+      <nav class="navbar navbar-expand-md navbar-light bg-primary justify-content-between ">
+
+      </nav>
+      <!-----##################################### CITYPAGE CONTENTS  #############################################-->
+    <!-- city information injection section-->
+    <br>
+    <div class="container-fluid bg-Custom1 rounded-lg " id="myCity">       
+         
+      <!--Hard code of the card to pass it for jS-->
+      <div class="row  justify-content-between ">
+        <div class="col-md-4 ">
+
+          <div class="row" style="padding-left: 3%; padding-top: 2%">
+            <img id="imgBrasao"  class="rounded-lg brasao-style" src="../IMG/PDL-Brasao.png" >                
+          </div>
+          <br>
+
+          <div class="row">
+            <div class="col">
+                <h4 id="cityName">Ponta Delgada</h4><br>
+                <p id="cityDate"><span class="font-weight-bold">Data Fundada:</span></p>
+                <p id="cityZone"><span class="font-weight-bold">Zona:</span> </p>
+            </div>
+            
+          </div>
+        </div>
+
+        <div class="col-md-6 " style="padding-top: 1%" >
+          <!--################### GOOGLE Maps ZONE##################################-->
+          <div >
+            <iframe id="googleMap" src=""  frameborder="0"  allowfullscreen></iframe>
+          </div> <!--It gets iffy when i bring this fuction to the javascripts i will have to try tomorrow   -->
+
+        <!--######################### END OF GOOGLE MAPS API#####################################-->
+
+        </div>
+
+      </div>
+      <!--Second row-->
+
+      <div class="row  justify-content-between">
+        <div class="col-md-4 ">
+          <p id="cityLevel"><span class="font-weight-bold">Nivel:</span> </p>
+          <p id="cityUpload"><span class="font-weight-bold">Addicionado:</span> </p>
+          <!--needs ajustments for responsivenet in difertent divices anda  clickable button-->
+          
+          <p id="cityFave"><span class="font-weight-bold">Gostos: </span>0## <button id="btn-Heart" type="button" class="btn btn-outline-danger">
+                <img id="img-heart" src="../misc/Images/favorite-heart-button.png" style="width: 20px; height: 20px;">
+             </button></p>
+        </div>
+        <br>
+        <div class="col-md-6 " >
+          
+          <p id="cityDesc">Short discript/ wiki link blabla adsadiawodhawhdajiodasdhoisahds
+          sdhuasdhowiiwahdlahsldhwaehawk</p>
+          <a id="cityLink" href="#">Pagina wiki da Cidade </a>
+        </div>
+
+
+        
+      </div>
+      <br>
+
+      <!--image gallery,inject the code via js on the id -->
+
+      <div class="row bg-primary rounded-lg" id="cityGallery" style="padding: 2%"> 
+        <!--hard code base--->
+        <!--<div class="col-md-3 ">              
+          <img  class="img-fluid " src="../IMG/PDL-picture1.jpg" >              
+        </div>-->
+
+        <div class="col-md-3">
+          <img class="img-fluid " src="../IMG/PDL-picture2.jpg" >              
+        </div>
+
+        <div class="col-md-3" >
+          <img class="img-fluid " src="../IMG/PDL-picture3.jpg" >              
+        </div>
+
+        <div class="col-md-3">
+          <img class="img-fluid " src="../IMG/PDL-picture4.png">              
+        </div>
+
+      </div>
+      
+      <br>
+
+      <!--Comment section whit fave counter-->
+      <div class="row justify-content-center">
+
+        <div id="commentView" class="container-fluid bg-primary  rounded-lg" style="width: 95%; padding-top:1%; padding-bottom: 1%">
+          <!--##############Comment injection####################-->
+          
+
+          <!--Comments end hard code -->
+        </div>
+
+      </div>
+
+      
+      <!--Comments textbox and button-->
+
+      <br>
+
+
+      <div class="row justify-content-center">
+          <div class="row  justify-content-between" style="width: 96%">
+              <div class="col-md-10">
+                <textarea id="commentArea" placeholder="Escreva o seu comentario..."></textarea>
+              </div>
+      
+              <div class="col-md-2 align-self-center">
+                <button id="btn-comment" type="button" class="btn btn-primary btn-lg">Comentar</button>
+              </div>
+              
+            </div>
+
+      </div>
+      
+                              
+            
+
+                  
+
+              
+
+    </div>
+
+
+    
+      
+    <!-- Optional JavaScript -->
+    <script type="module" src="../JS/Views/CityPageView.js"></script>
+    <script type="module" src="/JS/Views/navBarView.js"></script>
+    <!--GOOGLE MAPS LYBRARY-->
+    <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9HEeniC2SRtX0XSe_DWPETuWn5oFU7es&callback=myMap"></script>-->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!--################################### PAGE LAYOUT ################################################-->
+
+
+
+
+
+
+  </body>
+</html>

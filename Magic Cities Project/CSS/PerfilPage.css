@@ -1,0 +1,80 @@
+/*######################## SIDEBAR BURGER/nav CODE HERE##############################  */
+#sideBurger ul {
+  position: absolute;
+  /* set a fixed position relative to the screen of the device */
+  right: -7%;
+  /* position hidden from the screen nothing above the width */
+  transition: 0.3s;
+  /* hovver transsation */
+  padding: 1%;
+  width: 8%;
+
+  border-radius: 5px 0 0 5px;
+  /* Rounded corners on the right sides*/
+  background-color:rgb(208, 21, 255);
+  /*temp color - color pick the color from AI */
+  z-index: 1;
+
+}
+
+#sideBurger ul:hover {
+  right: 0px;
+}
+
+#sideBurger img {
+  width: 80%;
+  height: 80%;
+}
+
+
+
+#bg{
+  background-color:#60b2ff;
+  width: 93%; 
+  margin: 2.7; 
+  margin-top:2.7;
+  margin-bottom: 2.7;
+  padding: 0.5%
+}
+
+#bordering{
+  margin: 3%;
+  font-size: auto;
+}
+#overalContainer{
+  margin-top:10%;
+  max-width: 50%;
+
+
+}
+#iconBorder{
+  background-color: blue;
+}
+
+#perfilContainer{
+  margin: 2%;
+}
+
+#perfilIcon{
+ max-width: 100%;
+ max-height: auto;
+}
+
+#infoCard{
+  border-radius: 12px;
+  background-color: #4e6efa;
+}
+#infoContainer{
+  border-radius:12px;
+  background-color: #60b2ff;
+  
+}
+
+#lvlRank{
+  font-size: 20px;
+}
+
+
+
+
+

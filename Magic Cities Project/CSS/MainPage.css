@@ -1,0 +1,49 @@
+/*######################## SIDEBAR BURGER/nav CODE HERE##############################  */
+#sideBurger ul { 
+    position: fixed; /* set a fixed position relative to the screen of the device */
+    right: -7%; /* position hidden from the screen nothing above the width */
+    transition: 0.3s; /* hovver transsation */
+    padding: 1%;
+    width: 8%; 
+       
+    border-radius: 5px 0 0 5px; /* Rounded corners on the right sides*/
+    background-color: rgb(208, 21, 255); /*temp color - color pick the color from AI */
+    z-index: 1;
+    
+}
+
+#sideBurger ul:hover{
+    right: 0%;
+}
+
+#sideBurger img{
+    width: 80%;
+    height: 80%;
+}
+/*##########################################################################################*/
+
+
+
+/*############################## Card moddiciations style ########################### */
+
+.bg-Custom1{
+    background-color: #60b2ff;
+    width: 93%;
+    margin-top: 2.7% ;
+    margin-bottom: 2.7%;
+    padding: 0.5%
+}
+
+/*############################## Card moddiciations style( classes whit a second word cap are non bootstrap ones) ########################### */
+
+.btn-Hover{
+    background-color: #90c9ff;
+}
+
+.img-Size{
+    max-width: 220px;
+    min-height: 170px
+
+
+}
+

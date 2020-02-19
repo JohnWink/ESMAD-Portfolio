@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>landingPage</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!--Favicon-->
+    <link rel="icon" href="/IMG/DG_favicon-02.png" type="image/gif" sizes="16x16">
+    <!--Custom CS-->
+    <link rel="stylesheet" href="CSS/landingPage.css">
+    <!--Style Test-->
+  
+  </head>
+  <body>
+  
+ 
+  <div class="container-fluid" id="bg">
+
+    <!--Containers for the login, sign up buttons and logo (we will need to do a css clean up, putting any css code, to the style sheet file)-->
+      <div class="container-fluid" id="topBar">
+
+      <div  class="row justify-content-end"> <!--Organizing logo to the side of the sign up and login buttons-->
+        <div class= "col-4">
+          <img src="misc/Images/WEBSITE_LAYOUT_FINAL1_dicection_logo.png" id="logo">
+        </div>
+        <div class="col-4"> 
+          <div class="row justify-content-end">
+
+            <div class="col-1-12" style="padding-right:10px"> <!--we need to manipulate the css of the buttons and make sure they are properly allied -->
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-outline-primary btn-lg" data-toggle="modal" data-target="#loginModal">Log In</button>
+            </div>
+          </div>        
+        
+        <!-- Login Modal -->
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+          <div class="modal-dialog"  role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Entrar na Conta</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+              <div class="modal-body">
+        
+       <!--Calls a function to check inputted info with the storaged one-->
+                  <form id="frmLogin">
+                    <div class="container-fluid">
+                      <div class="container">
+                   
+                      <label for="usernameLogin"><b>Username</b></label>
+                      <input type="text" id="usernameLogin" placeholder="Introduz Username">
+                      <br>
+                      <label for="passwordLogin"><b>Password</b></label>
+                      <input type="password" id="passwordLogin" placeholder="Introduz Password">
+                      <br>
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <input type="submit" class="btn btn-primary" value="login">
+                <button type="button"  class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              </div>
+            </form>
+            </div>
+          </div>
+        </div>
+        <!--Sign up Modal-->
+          <div class="row justify-content-end" style="padding-top: 10px">
+            <div class="col-1-12" style="padding-right:10px">
+    
+              <button type="button" class="btn btn-outline-warning btn-lg" data-toggle="modal" data-target="#signupModal">Sign UP</button>
+
+              <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                  <div class="modal-dialog"  role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title">Inscreve-te!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <form id="frmSignUp">
+                              <div class="form-group">
+                                <p>Por favor preenche o formulário para criar uma conta</p>
+                                
+                                <!--Will call a function to post the inputted information-->
+                            
+                                <label for="usernameRegister"><b>Username</b></label>
+                                <input type="text" class="form-control" id="usernameRegister"placeholder="Introduza username">
+                                <br>
+                                <label for="passwordRegister"><b>Password</b></label>
+                                <input type="password" class="form-control" placeholder="Introduza Password" id="passwordRegister">
+                                <br>
+                                <label for="passwordRegisterConfirm"><b>Confirmar Password</b></label>
+                                <input type="password" class="form-control" placeholder="Repita a password" id="passwordRegisterConfirm">
+                      </div>
+                      <div class="modal-footer">
+                          <input type="submit" class="btn btn-primary" value="Save changes">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                      </form>
+                      
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+    </div>
+
+    <!--Cotainers for the speach bubble-->
+    <div class="container">
+      <div class="row justify-content-center" >
+        <div class="row rounded-lg" id="dialogueBox"> <!--we need a size that can stay in the middle whithout change on both phone and desktop resolutions -->
+          <div id="introText">
+            <p>Bem vindo á Magic Cities. O lugar onde feiticeiros e feiticeiras podem usar os seus 
+              poderes para explorar e salvar um País agora confuso mas muito importante para vários, Portugal!</p>
+          </div>
+      </div>
+    </div>
+   </div>
+
+    <!--Wizard container, needs to be always below the speach bubble contater to do the speach bubble effect -->
+      <div class="container-fluid">
+        <div class="row justify-content-start">
+          <img src="misc/Images/WEBSITE_LAYOUT_FINAL1_dicection_wizard.png" class="img-fluid" alt="Image Not Found" id="wizzard"  >
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!-- Optional JavaScript -->
+   <script type="module" src="JS/Views/LandingPageView.js"></script>
+
+    <!--SweetAlert connection-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="sweetalert2.all.min.js"></script>
+    <!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser -->
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  
+
+  </body>
+</html>

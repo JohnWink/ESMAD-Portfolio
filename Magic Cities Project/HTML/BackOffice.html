@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <title>BackOffice - Magic Cities</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="../CSS/MainPage.css">
+        
+        <!--Favicon-->
+        <link rel="icon" href="/IMG/DG_favicon-02.png" type="image/gif" sizes="16x16">
+
+
+    </head>
+
+    <body>
+
+
+
+        <!----------------------Navbar code (copy this part for the other pages and add modifications)--------------------------------------------->
+        <!--Sidebar burger code apperence  -->
+        <div id="sideBurger">
+            <ul>
+                <!--Current problem atm is making it responcive to diferent defices ad diferent smaller resolutions (ask teacher>-->
+                <a href="MainPage.html"><img src="../IMG/iconPages/HomeIcon.png"></a><br><br>
+                <a href="CatalogPage.html"><img src="../IMG/iconPages/CatalogIcon.png"></a><br><br>
+                <a href="QuizPage.html"><img src="../IMG/iconPages/QuizzIcon.png"></a><br><br>
+                <a href="PerfilPage.html"><img src="../IMG/iconPages/ProfileIcon.png"></a><br><br>
+                <a href="SugestionPage.html"><img src="../IMG/iconPages/SugestionsIcon.png"></a><br><br>
+            </ul>
+        </div>
+        <!--mainnavbar code -->
+        <nav class="navbar navbar-expand-md navbar-light bg-primary justify-content-between ">
+
+        </nav>
+
+        <!------------------------------------------------------------------------------->
+
+
+        <!--#############################################   Back Office contents   ###########################################################-->
+
+        
+            <div class="container-fluid">
+                <div class="jumbotron">
+                    <h1 class="display-3">Nova Pergunta</h1>
+                    <p class="lead">Adicionar uma nova pergunta</p>
+                    <hr class="my-2">
+                    <p>
+                        <form id="frmAddQuestion">
+                            
+                            <div class="form-group">
+                                <label for="txtNarrative">Narração</label>
+                                <textarea class="form-control" id="txtNarrative" rows="3"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="txtDescription">Descrição da Pergunta</label>
+                                <input type="text" class="form-control" id="txtDescription" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="firstAnswer">Primeira Resposta</label>
+                                <input type="text" class="form-control" id="firstAnswer" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="secondAnswer">Segunda Resposta</label>
+                                <input type="text" class="form-control" id="secondAnswer" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="thirdAnswer">Terceira Resposta</label>
+                                <input type="text" class="form-control" id="thirdAnswer" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="fourthAnswer">Quarta Resposta</label>
+                                <input type="text" class="form-control" id="fourthAnswer" required>
+                            </div> 
+                            
+                            <div class="form-row">
+                                <div class="form-group col-sm-3">
+                                    <label for="correctAnswer">Resposta correta</label>
+                                    <select class="form-control" id="correctAnswer">
+                                        <option value="0">Primeira</option>
+                                        <option value="1">Segunda</option>
+                                        <option value="2">Terceira</option>
+                                        <option value="3">Quarta</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="questionLevel">Nível da Pergunta</label>
+                                <input type="text" class="form-control" id="questionLevel" required>
+                            </div>
+
+                            
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="reset" class="btn btn-danger">Reset</button>
+                        </form>
+        
+                    </p>
+        
+                </div>
+        
+            </div>
+
+
+        <!-- Optional JavaScript -->
+        <script type="module" src="../JS/Views/navBarView.js"></script>
+        <script type="module" src="../JS/Views/backOfficeView.js"></script>
+        <!--Sweet alerts scripts-->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+        <script src="sweetalert2.all.min.js"></script>
+        <!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser -->
+        <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>

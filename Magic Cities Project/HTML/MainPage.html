@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Página Principal- Magic Cities</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS/MainPage.css">
+
+     <!--Favicon-->
+     <link rel="icon" href="../IMG/DG_favicon-02.png" type="image/gif" sizes="16x16">
+
+  </head>
+  <body>
+
+    
+
+    
+<!----------------------Navbar code (copy this part for the other pages and add modifications)--------------------------------------------->
+    <!--Sidebar burger code apperence  -->
+    <div id="sideBurger">
+        <ul>
+          <!--Current problem atm is making it responcive to diferent defices ad diferent smaller resolutions (ask teacher>-->
+          <a href="MainPage.html"><img src="../IMG/iconPages/HomeIcon.png"></a><br><br>
+          <a href="CatalogPage.html"><img src="../IMG/iconPages/CatalogIcon.png" ></a><br><br>
+          <a href="QuizPage.html"><img src="../IMG/iconPages/QuizzIcon.png" ></a><br><br>
+          <a href="PerfilPage.html"><img src="../IMG/iconPages/ProfileIcon.png"></a><br><br>
+          <a href="SugestionPage.html"><img src="../IMG/iconPages/SugestionsIcon.png" ></a><br><br>
+        </ul>
+      </div>
+    <!--mainnavbar code -->
+    <nav class="navbar navbar-expand-md navbar-light bg-primary justify-content-between ">
+
+    </nav>  
+
+
+
+    <!------------------------------------------------------------------------------->
+  
+
+    <!--#############################################   Mainpage contents   ###########################################################-->
+    <div class="container-fluid  bg-primary rounded-lg " style="width: 93%; margin-top: 2.7% ; margin-bottom: 2.7%">
+      <!--############ FIRST ROW (Each row is a ard system) #################-->
+      <br>
+      <form class="form-inline">
+          <div class="form-group">
+              <label for="sltGenre " class="text-white font-weight-bold">Cidades Mais: </label>
+              <select class="form-control m-2" name="" id="sltFilter">
+                  <option value="Recent">Recentes</option>
+                  <option value="Votes">Votadas</option>
+                  <option value="Comments">Comentadas</option>
+              </select>
+          </div>
+          
+          <button id="btnFilter" type="button" class="btn btn-warning m-2">Selecionar</button>
+      </form>
+      <!-- after the press 4 cards will apper via JS-->
+
+      <!--######## Card row  whit filter for most viewed, faved and comented ##############-->
+      <!-- NOTE_:(Hardcode, after needs to be in js inplemented in the views but first you will need some predefined data in the controlls)-->
+      <div id="myTopcards" class="row justify-content-md-between align-self-center" style="padding: 2%">
+      <!--Js injectionion-->
+        
+      </div>
+        
+        
+    </div> 
+      <!--######################## end of first ROW #########################################-->
+
+      <br>
+      
+      
+    
+    </div> 
+    
+    
+    <!--############################## Start of the last row (Utily options) ##############################-->
+    <!--This will have about 4 cards, the quizz, catalog, profile, ask and leaderboard-->
+
+    <div class="container-fluid bg-primary rounded-lg " style="width: 93%; margin-top: 2.7% ; margin-bottom: 2.7%">
+      <br>
+      
+      <div class="row justify-content-md-between align-self-center" style="padding: 2%">
+      
+        <!-- ####HARDCODE##### Card layout , witch will be inplemented on the js , 4 CARDS TOTAL ####HARDCODE##### -->
+        <div class="card btn-Hover">
+          <button type="button" class="btn" id="quizButton">
+            <div class="card-body rounded-lg">
+              <img class="rounded-lg" src="../IMG/iconPages/QuizzIcon.png" style="height: 170px; width: 200px" alt="cidadeImg">
+              <br><br>
+              <h2 class="card-title text-center rounded-lg">Quiz</h2>            
+            </div>
+          </button>          
+        </div>
+        
+        <div class="card btn-Hover">
+          <button type="button" class="btn " id="btnCatalog">
+            <div class="card-body">
+              <img class="rounded-lg" src="../IMG/iconPages/CatalogIcon.png" style="height: 170px; width: 200px" alt="cidadeImg">
+              <br><br>
+              <h2 class="card-title text-center">Catalago</h2>            
+            </div>
+          </button>          
+        </div>
+
+        <div class="card btn-Hover">
+          <button type="button" class="btn" id="perfilButton">
+            <div class="card-body">
+              <img class="rounded-lg" src="../IMG/iconPages/ProfileIcon.png" style="height: 170px; width: 200px" alt="cidadeImg">
+              <br><br>
+              <h2 class="card-title text-center">Perfil</h2>            
+            </div>
+          </button>          
+        </div>
+        
+
+        <div class="card btn-Hover">
+          <!-- Rank Modal trigger button-->
+          <button type="button" class="btn " id="rankBtn" data-toggle="modal" data-target="#rankModal">
+            <div class="card-body">
+              <img class="rounded-lg" src="../IMG/iconPages/RankTableIcon.png" style="height: 170px; width: 200px" alt="cidadeImg">
+              <br><br>
+              <h2 class="card-title text-center">Ranks</h2>            
+            </div>
+          </button>          
+        </div>
+                      <!-- ####HARDCODE##### End of the cards Hardcode layout ####HARDCODE#####-->
+        
+      </div> 
+      
+      <br>
+
+
+  </div>
+  
+  <!-- Rank Modal -->
+  <div class="modal fade" id="rankModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title">Feiticeiros top 4</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+              <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Lugar</th>
+                      <th scope="col">Nome</th>
+                      <th scope="col">Nível</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">#1</th>
+                      <td id="usernameFirst">Mark</td>
+                      <td id="levelFirst">20</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">#2</th>
+                      <td id="usernameSecond">Jacob</td>
+                      <td id="levelSecond">10</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">#3</th>
+                      <td id="usernameThird">Larry</td>
+                      <td id="levelThird">5</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">#4</th>
+                        <td id="usernameFourth">Larry</td>
+                        <td id="levelFourth">1</td>
+                      </tr>
+                  </tbody>
+                </table>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+
+      
+    <!-- Optional JavaScript -->
+    <script type="module" src="/JS/Views/MainPageView.js"></script>
+    <script type="module" src="/JS/Views/navBarView.js"></script>
+    <!--SweetAlert 2 scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="sweetalert2.all.min.js"></script>
+    <!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser -->
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+  
+  </body>
+</html>
