@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Title</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <style>
+        .selector-for-some-widget {
+            box-sizing: content-box;
+        }
+        .center{
+            position: absolute;
+              width: 100%;
+                left: 38%;
+              text-align: center;
+              font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center">Account Information</h1>
+    <div style="width: 25%; align: center" class="center" >
+        <form>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Insert your name">
+             </div>
+              <div class="form-group">
+                <label>Password</label>
+                  <input class="form-control" type="password" id="password">
+                  <input class="showPassword" type="checkbox" onclick="showPassword()">      Show Password
+              </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="text" class="form-control" id="phone" placeholder="Insert your phone number">
+            </div>
+            <div class="form-group">
+                <label for="prefered_contact">Prefered Contact</label>
+                <input type="text" class="form-control" id="prefered_contact" placeholder="Insert your prefered contact method">
+            </div>
+
+            <div class="form-group">
+                <label for="messenger_name">Messenger Name</label>
+                <input type="text" class="form-control" id="messenger_name" placeholder="Insert your name in messenger">
+            </div>
+             <div class="form-group">
+                <label for="time_zone">Time Zone</label>
+                 <select class="custom-select" id="time_zone">
+                   <option timeZoneId="1" gmtAdjustment="GMT-12:00" useDaylightTime="0" value="-1200">International Date Line West (GMT-12:00)</option>
+                    <option timeZoneId="2" gmtAdjustment="GMT-11:00" useDaylightTime="0" value="-1100">Midway Island, Samoa (GMT-11:00)</option>
+                    <option timeZoneId="3" gmtAdjustment="GMT-10:00" useDaylightTime="0" value="-1000">Hawaii (GMT-10:00) </option>
+                    <option timeZoneId="4" gmtAdjustment="GMT-09:00" useDaylightTime="1" value="-900">Alaska (GMT-09:00)</option>
+                    <option timeZoneId="5" gmtAdjustment="GMT-08:00" useDaylightTime="1" value="-0800">Pacific Time (US & Canada) (GMT-08:00)</option>
+                    <option timeZoneId="6" gmtAdjustment="GMT-08:00" useDaylightTime="1" value="-0800">Tijuana, Baja California (GMT-08:00)</option>
+                    <option timeZoneId="7" gmtAdjustment="GMT-07:00" useDaylightTime="0" value="-0700">Arizona (GMT-07:00)</option>
+                    <option timeZoneId="8" gmtAdjustment="GMT-07:00" useDaylightTime="1" value="-0700">Chihuahua, La Paz, Mazatlan (GMT-07:00)</option>
+                    <option timeZoneId="9" gmtAdjustment="GMT-07:00" useDaylightTime="1" value="-0700">Mountain Time (US & Canada) (GMT-07:00)</option>
+                    <option timeZoneId="10" gmtAdjustment="GMT-06:00" useDaylightTime="0" value="-0600">Central America (GMT-06:00)</option>
+                    <option timeZoneId="11" gmtAdjustment="GMT-06:00" useDaylightTime="1" value="-0600">Central Time (US & Canada) (GMT-06:00)</option>
+                    <option timeZoneId="12" gmtAdjustment="GMT-06:00" useDaylightTime="1" value="-0600">Guadalajara, Mexico City, Monterrey (GMT-06:00)</option>
+                    <option timeZoneId="13" gmtAdjustment="GMT-06:00" useDaylightTime="0" value="-0600">Saskatchewan (GMT-06:00) </option>
+                    <option timeZoneId="14" gmtAdjustment="GMT-05:00" useDaylightTime="0" value="-0500">Bogota, Lima, Quito, Rio Branco (GMT-05:00)</option>
+                    <option timeZoneId="15" gmtAdjustment="GMT-05:00" useDaylightTime="1" value="-0500">Eastern Time (US & Canada) (GMT-05:00)</option>
+                    <option timeZoneId="16" gmtAdjustment="GMT-05:00" useDaylightTime="1" value="-0500">Indiana (East) (GMT-05:00) </option>
+                    <option timeZoneId="17" gmtAdjustment="GMT-04:00" useDaylightTime="1" value="-0400">Atlantic Time (Canada) (GMT-04:00)</option>
+                    <option timeZoneId="18" gmtAdjustment="GMT-04:00" useDaylightTime="0" value="-0400">Caracas, La Paz (GMT-04:00)</option>
+                    <option timeZoneId="19" gmtAdjustment="GMT-04:00" useDaylightTime="0" value="-0400">Manaus (GMT-04:00)</option>
+                    <option timeZoneId="20" gmtAdjustment="GMT-04:00" useDaylightTime="1" value="-0400">Santiago (GMT-04:00)</option>
+                    <option timeZoneId="21" gmtAdjustment="GMT-03:30" useDaylightTime="1" value="-0330">Newfoundland (GMT-03:30)</option>
+                    <option timeZoneId="22" gmtAdjustment="GMT-03:00" useDaylightTime="1" value="-0300">Brasilia (GMT-03:00)</option>
+                    <option timeZoneId="23" gmtAdjustment="GMT-03:00" useDaylightTime="0" value="-0300">Buenos Aires, Georgetown (GMT-03:00)</option>
+                    <option timeZoneId="24" gmtAdjustment="GMT-03:00" useDaylightTime="1" value="-0300">Greenland (GMT-03:00)</option>
+                    <option timeZoneId="25" gmtAdjustment="GMT-03:00" useDaylightTime="1" value="-0300">Montevideo (GMT-03:00)</option>
+                    <option timeZoneId="26" gmtAdjustment="GMT-02:00" useDaylightTime="1" value="-0200">Mid-Atlantic (GMT-02:00)</option>
+                    <option timeZoneId="27" gmtAdjustment="GMT-01:00" useDaylightTime="0" value="-0100">Cape Verde Is. (GMT-01:00)</option>
+                    <option timeZoneId="28" gmtAdjustment="GMT-01:00" useDaylightTime="1" value="-0100">Azores (GMT-01:00)</option>
+                    <option timeZoneId="29" gmtAdjustment="GMT+00:00" useDaylightTime="0" value="+0000">Casablanca, Monrovia, Reykjavik (GMT+00:00)</option>
+                    <option timeZoneId="30" gmtAdjustment="GMT+00:00" useDaylightTime="1" value="+0000">Greenwich Mean Time : Dublin, Edinburgh, Lisbon, London (GMT+00:00)</option>
+                    <option timeZoneId="31" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="+0100">Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna (GMT+01:00)</option>
+                    <option timeZoneId="32" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="+0100">Belgrade, Bratislava, Budapest, Ljubljana, Prague (GMT+01:00)</option>
+                    <option timeZoneId="33" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="+0100">Brussels, Copenhagen, Madrid, Paris (GMT+01:00)</option>
+                    <option timeZoneId="34" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="+0100">Sarajevo, Skopje, Warsaw, Zagreb (GMT+01:00)</option>
+                    <option timeZoneId="35" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="+0100">West Central Africa (GMT+01:00)</option>
+                    <option timeZoneId="36" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="+0200">Amman (GMT+02:00)</option>
+                    <option timeZoneId="37" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="+0200">Athens, Bucharest, Istanbul (GMT+02:00)</option>
+                    <option timeZoneId="38" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="+0200">Beirut (GMT+02:00)</option>
+                    <option timeZoneId="39" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="+0200">Cairo (GMT+02:00)</option>
+                    <option timeZoneId="40" gmtAdjustment="GMT+02:00" useDaylightTime="0" value="+0200">Harare, Pretoria (GMT+02:00)</option>
+                    <option timeZoneId="41" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="+0200">Helsinki, Kyiv, Riga, Sofia, Tallinn, Vilnius (GMT+02:00)</option>
+                    <option timeZoneId="42" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="+0200">Jerusalem (GMT+02:00)</option>
+                    <option timeZoneId="43" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="+0200">Minsk (GMT+02:00)</option>
+                    <option timeZoneId="44" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="+0200">Windhoek (GMT+02:00)</option>
+                    <option timeZoneId="45" gmtAdjustment="GMT+03:00" useDaylightTime="0" value="+0300">Kuwait, Riyadh, Baghdad (GMT+03:00)</option>
+                    <option timeZoneId="46" gmtAdjustment="GMT+03:00" useDaylightTime="1" value="+0300">Moscow, St. Petersburg, Volgograd (GMT+03:00)</option>
+                    <option timeZoneId="47" gmtAdjustment="GMT+03:00" useDaylightTime="0" value="+0300">Nairobi (GMT+03:00)</option>
+                    <option timeZoneId="48" gmtAdjustment="GMT+03:00" useDaylightTime="0" value="+03:00">Tbilisi (GMT+03:00)</option>
+                    <option timeZoneId="49" gmtAdjustment="GMT+03:30" useDaylightTime="1" value="+0330">Tehran (GMT+03:30)</option>
+                    <option timeZoneId="50" gmtAdjustment="GMT+04:00" useDaylightTime="0" value="+0400">Abu Dhabi, Muscat (GMT+04:00)</option>
+                    <option timeZoneId="51" gmtAdjustment="GMT+04:00" useDaylightTime="1" value="+0400">Baku (GMT+04:00)</option>
+                    <option timeZoneId="52" gmtAdjustment="GMT+04:00" useDaylightTime="1" value="+0400">Yerevan (GMT+04:00)</option>
+                    <option timeZoneId="53" gmtAdjustment="GMT+04:30" useDaylightTime="0" value="+0430">Kabul (GMT+04:30)</option>
+                    <option timeZoneId="54" gmtAdjustment="GMT+05:00" useDaylightTime="1" value="+0500">Yekaterinburg (GMT+05:00)</option>
+                    <option timeZoneId="55" gmtAdjustment="GMT+05:00" useDaylightTime="0" value="+0500">Islamabad, Karachi, Tashkent (GMT+05:00)</option>
+                    <option timeZoneId="56" gmtAdjustment="GMT+05:30" useDaylightTime="0" value="+0530">Sri Jayawardenapura (GMT+05:30)</option>
+                    <option timeZoneId="57" gmtAdjustment="GMT+05:30" useDaylightTime="0" value="+0530">Chennai, Kolkata, Mumbai, New Delhi (GMT+05:30)</option>
+                    <option timeZoneId="58" gmtAdjustment="GMT+05:45" useDaylightTime="0" value="+0545">Kathmandu (GMT+05:45)</option>
+                    <option timeZoneId="59" gmtAdjustment="GMT+06:00" useDaylightTime="1" value="+0600">Almaty, Novosibirsk (GMT+06:00)</option>
+                    <option timeZoneId="60" gmtAdjustment="GMT+06:00" useDaylightTime="0" value="+0600">Astana, Dhaka (GMT+06:00)</option>
+                    <option timeZoneId="61" gmtAdjustment="GMT+06:30" useDaylightTime="0" value="+0630">Yangon (Rangoon) (GMT+06:30)</option>
+                    <option timeZoneId="62" gmtAdjustment="GMT+07:00" useDaylightTime="0" value="+0700">Bangkok, Hanoi, Jakarta (GMT+07:00)</option>
+                    <option timeZoneId="63" gmtAdjustment="GMT+07:00" useDaylightTime="1" value="+0700">Krasnoyarsk (GMT+07:00)</option>
+                    <option timeZoneId="64" gmtAdjustment="GMT+08:00" useDaylightTime="0" value="+0800">Beijing, Chongqing, Hong Kong, Urumqi (GMT+08:00)</option>
+                    <option timeZoneId="65" gmtAdjustment="GMT+08:00" useDaylightTime="0" value="+0800">Kuala Lumpur, Singapore (GMT+08:00)</option>
+                    <option timeZoneId="66" gmtAdjustment="GMT+08:00" useDaylightTime="0" value="+0800">Irkutsk, Ulaan Bataar (GMT+08:00)</option>
+                    <option timeZoneId="67" gmtAdjustment="GMT+08:00" useDaylightTime="0" value="+0800">Perth (GMT+08:00)</option>
+                    <option timeZoneId="68" gmtAdjustment="GMT+08:00" useDaylightTime="0" value="+0800">Taipei (GMT+08:00)</option>
+                    <option timeZoneId="69" gmtAdjustment="GMT+09:00" useDaylightTime="0" value="+0900">Osaka, Sapporo, Tokyo (GMT+09:00)</option>
+                    <option timeZoneId="70" gmtAdjustment="GMT+09:00" useDaylightTime="0" value="+0900">Seoul (GMT+09:00)</option>
+                    <option timeZoneId="71" gmtAdjustment="GMT+09:00" useDaylightTime="1" value="+0900">Yakutsk (GMT+09:00)</option>
+                    <option timeZoneId="72" gmtAdjustment="GMT+09:30" useDaylightTime="0" value="+0930">Adelaide (GMT+09:30)</option>
+                    <option timeZoneId="73" gmtAdjustment="GMT+09:30" useDaylightTime="0" value="+0930">Darwin (GMT+09:30)</option>
+                    <option timeZoneId="74" gmtAdjustment="GMT+10:00" useDaylightTime="0" value="+1000">Brisbane (GMT+10:00)</option>
+                    <option timeZoneId="75" gmtAdjustment="GMT+10:00" useDaylightTime="1" value="+1000">Canberra, Melbourne, Sydney (GMT+10:00)</option>
+                    <option timeZoneId="76" gmtAdjustment="GMT+10:00" useDaylightTime="1" value="+1000">Hobart (GMT+10:00)</option>
+                    <option timeZoneId="77" gmtAdjustment="GMT+10:00" useDaylightTime="0" value="+1000">Guam, Port Moresby (GMT+10:00)</option>
+                    <option timeZoneId="78" gmtAdjustment="GMT+10:00" useDaylightTime="1" value="+1000">Vladivostok (GMT+10:00)</option>
+                    <option timeZoneId="79" gmtAdjustment="GMT+11:00" useDaylightTime="1" value="+1100">Magadan, Solomon Is., New Caledonia (GMT+11:00)</option>
+                    <option timeZoneId="80" gmtAdjustment="GMT+12:00" useDaylightTime="1" value="+1200">Auckland, Wellington (GMT+12:00)</option>
+                    <option timeZoneId="81" gmtAdjustment="GMT+12:00" useDaylightTime="0" value="+1200">Fiji, Kamchatka, Marshall Is. (GMT+12:00)</option>
+                    <option timeZoneId="82" gmtAdjustment="GMT+13:00" useDaylightTime="0" value="+1300">Nuku'alofa (GMT+13:00)</option>
+                  </select>
+            </div>
+            <div class="row">
+                <div class="col-sm-4"><button type="button" class="btn btn-success btn-lg" onclick="confirm()">Confirm</button> </div>
+            </div>
+        </form>
+    </div>
+
+<script>
+    // show and hide password
+    function showPassword(){
+         var pass = document.getElementById("password");
+          if (pass.type === "password") {
+            pass.type = "text";
+          } else {
+            pass.type = "password";
+          }
+    }
+   async function confirm() {
+
+       let name = document.getElementById("name").value
+       let password = document.getElementById("password").value
+       let phone = document.getElementById("phone").value
+       let prefered_contact = document.getElementById("prefered_contact").value
+       let messenger_name = document.getElementById("messenger_name").value
+       let time_zone = document.getElementById("time_zone").value
+
+
+       const bodyFormData = new FormData()
+
+       bodyFormData.set('name',name)
+       bodyFormData.set('password',password)
+       bodyFormData.set('phone',phone)
+       bodyFormData.set('prefered_contact',prefered_contact)
+       bodyFormData.set('messenger_name',messenger_name)
+       bodyFormData.set('time_zone',time_zone)
+
+      await  axios({
+            method:'put',
+            url:`http://127.0.0.1:5000/users/{{user}}/activate`,
+            data:bodyFormData,
+            headers: {'Content-Type': 'multipart/form-data' }
+        })
+        .then(function (response) {
+            alert("Success")
+            console.log(response.status);
+        })
+        .catch(function (error) {
+            alert("error")
+            console.log(error.response.status);
+        });
+    }
+
+
+</script>
+</body>
+</html>
